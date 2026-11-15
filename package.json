@@ -1,0 +1,24 @@
+{
+  "name": "ride-stream-engine",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "网约车订单事件流计算服务:事件时间窗口、分城市水位线、迟到修正、精确一次、快照恢复与确定性回放",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --test \"test/**/*.test.ts\"",
+    "bench": "node src/cli/bench.ts",
+    "generate": "node src/cli/generate.ts",
+    "serve": "node src/cli/serve.ts",
+    "replay": "node src/cli/replay.ts",
+    "verify": "node src/cli/verify.ts"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2"
+  }
+}
